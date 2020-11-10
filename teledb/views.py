@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+
+def teledb(res, par):
+    return HttpResponse(par)
+
+
+def username(res, uname):
+    return HttpResponse()
