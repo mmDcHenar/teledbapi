@@ -1,4 +1,5 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
+from .Search import Search
 
 
 def teledb(res, par):
@@ -6,4 +7,8 @@ def teledb(res, par):
 
 
 def username(res, uname):
-    return HttpResponse()
+    return JsonResponse(Search(uname))
+
+
+def userid(res, uid):
+    return JsonResponse(Search(uid))

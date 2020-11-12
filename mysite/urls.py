@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('teledb/', views.teledb),
-    re_path(r'^teledb/(?:username=(?P<username>\d+)/)?$', views.teledb),
+    re_path(r'^teledb/(?:username=(?P<uname>\w+)/)?$', views.username),
+    re_path(r'^teledb/(?:userid=(?P<uid>\w+)/)?$', views.userid),
 ]
